@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {getCookie} from 'typescript-cookie';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>{getCookie('my-cookie') || 'cookie not set'}</p>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
